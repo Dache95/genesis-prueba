@@ -1,6 +1,8 @@
+import bcrypt from 'bcrypt'
+
 export const users = [
-  { id: 1, name: 'Daniel', email: 'daniel@daniel.com', password: '123456' },
-  { id: 2, name: 'Ana',    email: 'ana@ejemplo.com',    password: 'abcdef'  }
+  { id: 1, name: 'Daniel', email: 'daniel@daniel.com', password: bcrypt.hashSync('123456', 10) },
+  { id: 2, name: 'Ana',    email: 'ana@ejemplo.com',    password: bcrypt.hashSync('abcdef', 10)  }
 ];
 
 export const cards = [
